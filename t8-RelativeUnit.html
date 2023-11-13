@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta class="UTF-8">
+        <meta name="viewport" content="width=deivce-width,"> 
+        <title>CSS Relative Unit Example</title>
+        <style>
+            p{
+                font-size: 16px;
+            }
+            .message{
+                font-size: 2rem;
+            }
+            /*html{
+                font-size: 16px;
+            }*/
+            div{
+                font-size: 2em;
+            }
+        </style>
+    </head>
+    <body>
+        ไม่ติด Style
+        <P>CSS3</P>
+        <p class="message">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis dolores quidem unde modi! Possimus recusandae eum, soluta voluptatibus ducimus reprehenderit dolorem! Commodi excepturi quisquam cupiditate soluta aliquam. Numquam, laudantium quod?</p>
+        <div>CSS3</div>
+        <div>CSS3</div>
+        <div> 
+            test1 (16*2=32px)
+            <p style="font-size: 32px;">test1</p>
+            <div>
+                test2 (32*2=64px)
+                <p style="font-size: 64px;">test2</p>
+                <div>
+                    test3(64*2=128px)
+                    <div>
+                        test4(128*2=156px)
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
