@@ -1,9 +1,12 @@
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=deivce-width initial-scale=1.0">
 <title>-selectors- Basic CSS3</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/styles/default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.3.1/highlight.min.js"></script>
 <style>
     h1{
         color:red;
@@ -27,12 +30,29 @@
     <h1 class="title"> Basic CSS3 </h1>
     <p id="title"> เรียนรู้การใช้งาน CSS3 เบื้องต้น </p>
     <h1> ใช้งานร่วมกับ html5 </h1>
-    </center>
-    <pre><code>
-        <!-- Your code goes here -->
-        <!--<script src="https://raw.githubusercontent.com/pratchayari/BasicCSS/main/t4-CssSelectors.html"></script>-->
-        <iframe src="https://pratchayari.github.io/BasicCSS/" width="600" height="400"></iframe>
-       <!-- <script src="https://gist.github.com/pratchayari/1859c88047611cf1e9dba81a9fa7f7cf.js"></script>-->
-
-    </code></pre>
+    </center> 
+    <pre><code id="code-container" class="้language-html"></code></pre>    
+    <script>
+        // Fetch code from GitHub and display it
+        fetch('https://raw.githubusercontent.com/pratchayari/BasicCSS/main/t4-CssSelectors.html')
+            .then(response => response.text())
+            .then(code => {
+                document.getElementById('code-container').textContent = code;
+            })
+            .catch(error => {
+                console.error('Error fetching code:', error);
+            });
+        
+    </script>
+          <script>
+            // Apply syntax highlighting
+            document.addEventListener('DOMContentLoaded', (event) => {
+                document.querySelectorAll('pre code').forEach((block) => {
+                    hljs.highlightBlock(block);
+                });
+            });
+        </script>
+       
+</body>
 </html>
+
