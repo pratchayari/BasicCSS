@@ -4,30 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raw Git Example</title>
-  <style>
-    /* Optional: Style line numbers */
-    pre {
-      counter-reset: line;
-    }
-
-    code::before {
-      content: counter(line);
-      counter-increment: line;
-      padding-right: 1em;
-      color: #999; /* Line number color */
-      display: inline-block;
-    }
-  </style>
-</head>
-<body>
-  <pre><code id="raw-code"></code></pre>
-
+  <link rel="stylesheet" href="style.css">
   <script>
     const rawGitUrl = 'https://raw.githubusercontent.com/pratchayari/BasicCSS/main/t4-CssSelectors.html';
-
     fetch(rawGitUrl)
-      .then(response => response.text())
-      .then(data => {
+    .then(response => response.text())
+    .then(data => {
         // Split the content into lines
         const lines = data.split('\n');
 
@@ -35,8 +17,12 @@
         const formattedCode = lines.map((line, index) => `${index + 1}: ${line}`).join('\n');
 
         document.getElementById('raw-code').innerText = formattedCode;
-      })
-      .catch(error => console.error('Error fetching raw file:', error));
-  </script>
+    })
+    .catch(error => console.error('Error fetching raw file:', error));
+    </script>
+</head>
+<body>
+  <pre><code id="raw-code"></code></pre>
+  
 </body>
 </html>
