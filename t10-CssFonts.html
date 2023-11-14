@@ -19,6 +19,26 @@
          /**{
                 font-family: 'Courier New', Courier, monospace;
             }*/
+            pre {
+            counter-reset: line;
+            margin: 0;
+            padding: 0;
+            white-space: pre-wrap; /* Preserve line breaks */
+            display: flex;
+        }
+        code.line-numbers {
+            counter-increment: line;
+            padding-right: 1em;
+            width: 40px; /* Adjust as needed */
+            box-sizing: border-box;
+            display: block;
+            float: left;
+            text-align: right;
+            color: #999;
+        }
+        code.content {
+            flex: 1;
+        }
         </style>
     </head>
     <body>
@@ -29,5 +49,19 @@
         <p id="title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, consectetur pariatur sint magni nesciunt iusto labore quasi, distinctio aperiam eius ex blanditiis ad error vitae aliquid perspiciatis quod dolorum quia!</p>
         <hr>
         <div style="border: 1px solid black;" width= "500px" height="500px" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi obcaecati amet accusantium autem excepturi magni impedit natus eius, temporibus nostrum explicabo nobis dolorum beatae expedita? Ducimus esse repellendus molestiae vel!</div>
+        <pre><code id="code-container" class="language-html"></code></pre>
+
+        <script>
+            // Fetch code from GitHub and display it without line numbers
+            fetch('https://raw.githubusercontent.com/pratchayari/BasicCSS/main/t4-CssSelectors.html')
+                .then(response => response.text())
+                .then(code => {
+                    // Display code without line numbers
+                    document.getElementById('code-container').innerText = code;
+                })
+                .catch(error => {
+                    console.error('Error fetching code:', error);
+                });
+        </script>
     </body>
 </html>
