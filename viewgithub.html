@@ -4,25 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Raw Git Example</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/line-numbers/prism-line-numbers.min.css">
   <link rel="stylesheet" href="style.css">
-  <script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+  <script> 
     const rawGitUrl = 'https://raw.githubusercontent.com/pratchayari/BasicCSS/main/t4-CssSelectors.html';
-    fetch(rawGitUrl)
-    .then(response => response.text())
-    .then(data => {
-        // Split the content into lines
-        const lines = data.split('\n');
-
-        // Format the lines with line numbers
-        const formattedCode = lines.map((line, index) => `${index + 1}: ${line}`).join('\n');
-
-        document.getElementById('raw-code').innerText = formattedCode;
-    })
-    .catch(error => console.error('Error fetching raw file:', error));
-    </script>
+</script>
+  <script src="jscript.js"></script>
 </head>
 <body>
-  <pre><code id="raw-code"></code></pre>
-  
+  <pre class="line-numbers box"><code id="raw-code" class="language-html"></code></pre>
 </body>
 </html>
