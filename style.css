@@ -5,3 +5,15 @@ h1.title{
     color: orange;
     font-size: 16px;
 }
+    /* Optional: Style line numbers */
+    pre {
+        counter-reset: line;
+      }
+  
+      code::before {
+        content: counter(line);
+        counter-increment: line;
+        padding-right: 1em;
+        color: #999; /* Line number color */
+        display: inline-block;
+      }
