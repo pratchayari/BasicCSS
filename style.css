@@ -8,6 +8,9 @@ h1.title{
     /* Optional: Style line numbers */
     pre {
         counter-reset: line;
+        white-space: pre-line;
+        max-height: 400px; /* Adjust the maximum height as needed */
+        overflow: auto;   /* Add vertical scrolling */
       }
   
       code::before {
@@ -17,3 +20,13 @@ h1.title{
         color: #999; /* Line number color */
         display: inline-block;
       }
+      code {
+        color: #333; /* Code text color */
+        font-family: 'Courier New', monospace; /* Optional: Use monospace font */
+      }
+pre.box{
+    border: 1px solid black;
+    width: auto;
+    height: auto;
+
+}
