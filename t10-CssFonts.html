@@ -4,6 +4,15 @@
         <meta class="UTF-8">
         <meta name="viewport" content="width=deivce-width,"> 
         <title>CSS Universal Selectors Example</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/line-numbers/prism-line-numbers.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+        <script> 
+            const rawGitUrl = 'https://raw.githubusercontent.com/pratchayari/BasicCSS/main/t10-CssFonts.html';
+        </script>
+        <script src="jscript.js"></script>
         <style>
             .message{
                 color: chocolate;
@@ -49,19 +58,6 @@
         <p id="title">Lorem ipsum dolor sit amet consectetur, adipisicing elit. At, consectetur pariatur sint magni nesciunt iusto labore quasi, distinctio aperiam eius ex blanditiis ad error vitae aliquid perspiciatis quod dolorum quia!</p>
         <hr>
         <div style="border: 1px solid black;" width= "500px" height="500px" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi obcaecati amet accusantium autem excepturi magni impedit natus eius, temporibus nostrum explicabo nobis dolorum beatae expedita? Ducimus esse repellendus molestiae vel!</div>
-        <pre><code id="code-container" class="language-html"></code></pre>
-
-        <script>
-            // Fetch code from GitHub and display it without line numbers
-            fetch('https://raw.githubusercontent.com/pratchayari/BasicCSS/main/t4-CssSelectors.html')
-                .then(response => response.text())
-                .then(code => {
-                    // Display code without line numbers
-                    document.getElementById('code-container').innerText = code;
-                })
-                .catch(error => {
-                    console.error('Error fetching code:', error);
-                });
-        </script>
+    <pre class="line-numbers box"><code id="raw-code" class="language-html"></code></pre>
     </body>
 </html>
