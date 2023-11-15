@@ -1,3 +1,6 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Anuphan:wght@600&family=Maitree:wght@400&display=swap');
+
 p#message{
     color: blueviolet;
 }
@@ -29,4 +32,14 @@ pre.box{
     width: auto;
     height: auto;
 
+}
+p.fn{
+  font-family: 'Anuphan', sans-serif;
+  font-size:2em;
+  color:cadetblue;
+}
+.prph{
+  font-family: 'Maitree', serif;
+  font-size:1em;
+  color:cadetblue;
 }
